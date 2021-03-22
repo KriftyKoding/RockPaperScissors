@@ -7,7 +7,8 @@ let yourNumWins = 0
 CompResult();
 
 function CompResult() {
-    
+    test = ["rock", "paper", "scissors"][Math.floor(Math.random()*3)]
 
   }
+  
   
