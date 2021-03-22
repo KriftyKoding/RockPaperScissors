@@ -6,6 +6,16 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body> 
+        <script src="script.js"></script>
+       
+       
+        <p id="test">
+            <script>
+                document.write(test);
+                </script>
+        </p>
+        
+        
         <main>
             <h1>Rock, Paper, Scissors</h1>
             <h2>Best 3 out of 5 games wins</h2>
@@ -20,11 +30,17 @@
                 Results
             </div>
                 <div id=results>
-                    <div class=resultDisplay>
+                    <div id="you" class=resultDisplay>
                         You
+                        <script>
+                            document.write(yourNumWins);
+                            </script>
                     </div>
-                    <Div class=resultDisplay>
+                    <Div id="comp" class=resultDisplay>
                         Comp
+                        <script>
+                            document.write(compNumWins);
+                            </script>
                     </div>
                 </div>
             </div>
