@@ -3,8 +3,7 @@ let test = "Fianlly!!!!";
 
 let compNumWins = 0;
 let yourNumWins = 0;
-let playerValue ;
-let compValue;
+
 
 CompResult();
 
@@ -32,7 +31,32 @@ function fight(){
 }
 
 function playerRound(player, comp){
-    console.log(player);
-    console.log(comp);
-};
+    console.log(player,comp);
+   if (player == comp){
+    console.log("tie, try again.");
+   }
+   else if (player == "rock")
+        if (comp == "paper"){
+        console.log("Lose, try again.");
+        }
+        else {
+            console.log("Victory, try again.");
+        }
+    else if (player == "paper")
+        if (comp == "scissors"){
+        console.log("Lose, try again.");
+        }
+        else {
+            console.log("Victory, try again.");
+        }
+    else 
+        if (comp == "rock"){
+        console.log("Lose, try again.");
+        }
+        else {
+            console.log("Victory, try again.");
+        }
+}
+
+
 

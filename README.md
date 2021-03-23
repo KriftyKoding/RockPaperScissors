@@ -13,4 +13,4 @@
     ---[] used for arrays ~ list of values that you can access with integers
 
 
-<!-- start next session with step 4 -->
+<!-- start next session with step 5 -->
