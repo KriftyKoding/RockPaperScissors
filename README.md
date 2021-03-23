@@ -13,4 +13,6 @@
     ---[] used for arrays ~ list of values that you can access with integers
 
 
-<!-- start next session with step 5 -->
+<!-- fix final result page to show score. and clean things up-->
+
+<!-- think about trying switch instead of if else (would be much cleaner) -->

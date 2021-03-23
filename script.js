@@ -3,9 +3,17 @@ let test = "Fianlly!!!!";
 
 let compNumWins = 0;
 let yourNumWins = 0;
+let rounds = 0;
+
+test2();
+
+function test2(){
+    let test2 = 6
+    test2 += 1
+    console.log(test2)
+}
 
 
-CompResult();
 
 function CompResult() {
     return  ["rock", "paper", "scissors"][Math.floor(Math.random()*3)];
@@ -31,32 +39,82 @@ function fight(){
 }
 
 function playerRound(player, comp){
-    console.log(player,comp);
+    let alertComp = capFirstLetter(comp)
    if (player == comp){
-    console.log("tie, try again.");
+       rounds += 1;
+       alert(alertComp + ". Tie, " + (5-rounds) + 
+            " rounds left. Score " + yourNumWins +
+            " vs " + compNumWins + ".");
+       game();
    }
    else if (player == "rock")
         if (comp == "paper"){
-        console.log("Lose, try again.");
+        compNumWins += 1
+        rounds += 1;
+        alert(alertComp + ". Sorry you lose, " + (5-rounds) + 
+            " rounds left. Score " + yourNumWins +
+            " vs " + compNumWins + ".");
+       game();
+
         }
         else {
-            console.log("Victory, try again.");
+        yourNumWins += 1
+        rounds += 1;
+        alert(alertComp + ". Congrats, " + (5-rounds) + 
+            " rounds left. Score " + yourNumWins +
+            " vs " + compNumWins + ".");
+       game();
         }
     else if (player == "paper")
         if (comp == "scissors"){
-        console.log("Lose, try again.");
+            compNumWins += 1;
+            rounds += 1;
+            alert(alertComp + ". Sorry you lose, " + (5-rounds) + 
+                " rounds left. Score " + yourNumWins +
+                " vs " + compNumWins + ".");
+           game();
         }
         else {
-            console.log("Victory, try again.");
+            yourNumWins += 1
+            rounds += 1;
+            alert(alertComp + ". Congrats, " + (5-rounds) + 
+                " rounds left. Score " + yourNumWins +
+                " vs " + compNumWins + ".");
+        game();
         }
     else 
         if (comp == "rock"){
-        console.log("Lose, try again.");
+        compNumWins += 1;
+        rounds += 1;
+        alert(alertComp + ". Sorry you lose, " + (5-rounds) + 
+            " rounds left. Score " + yourNumWins +
+            " vs " + compNumWins + ".");
+       game();
         }
         else {
-            console.log("Victory, try again.");
-        }
+            yourNumWins += 1
+            rounds += 1;
+            alert(alertComp + ". Congrats, " + (5-rounds) + 
+                " rounds left. Score " + yourNumWins +
+                " vs " + compNumWins + ".");
+           game();
+            }
 }
+
+function game(){
+    if (rounds == 5){
+        alert("Congrat game over");
+    }
+    else{
+        fight();
+    }
+};
+
+function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+
 
 
 
