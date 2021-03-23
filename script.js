@@ -1,31 +1,24 @@
-let test = "Fianlly!!!!";
+
 
 
 let compNumWins = 0;
 let yourNumWins = 0;
 let rounds = 0;
 
-test2();
 
-function test2(){
-    let test2 = 6
-    test2 += 1
-    console.log(test2)
-}
-
-
-
-function CompResult() {
+function compChoice() {
     return  ["rock", "paper", "scissors"][Math.floor(Math.random()*3)];
   }
 
-function fight(){
+function fight(){ 
+    // this function is to see if input is invalid
     let userInput = prompt("Rock, paper, scissor???");
-    let comp = CompResult();
+    let comp = compChoice();
     userInput= userInput.toLowerCase();
     
     if (userInput == "rock") {
         playerRound(userInput, comp);
+        // maybe add == rock or paper or scissocrs for cleaner code
     }
     else if(userInput == "paper") {
         playerRound(userInput, comp);
@@ -39,6 +32,7 @@ function fight(){
 }
 
 function playerRound(player, comp){
+    // this is to see who wins and loses
     let alertComp = capFirstLetter(comp)
    if (player == comp){
        rounds += 1;
@@ -102,6 +96,7 @@ function playerRound(player, comp){
 }
 
 function game(){
+    // count  round function
     if (rounds == 5){
         alert("Congrat game over");
     }
