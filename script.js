@@ -1,30 +1,38 @@
-let test = "Fianlly!!!!"
+let test = "Fianlly!!!!";
 
 
-let compNumWins = 0
-let yourNumWins = 0
-let playerValue 
-let compValue
+let compNumWins = 0;
+let yourNumWins = 0;
+let playerValue ;
+let compValue;
 
 CompResult();
 
 function CompResult() {
-    test = ["rock", "paper", "scissors"][Math.floor(Math.random()*3)]
+    return  ["rock", "paper", "scissors"][Math.floor(Math.random()*3)];
   }
 
 function fight(){
     let userInput = prompt("Rock, paper, scissor???");
-
-    if (userInput.toLowerCase() == "rock") {
-      playerValue= userInput.toLowerCase();
+    let comp = CompResult();
+    userInput= userInput.toLowerCase();
+    
+    if (userInput == "rock") {
+        playerRound(userInput, comp);
     }
-    else if(userInput.toLowerCase() == "paper") {
-       playerValue= userInput.toLowerCase();
-      }
-    else if(userInput.toLowerCase() == "scissors") {
-       playerValue= userInput.toLowerCase();
-      }
+    else if(userInput == "paper") {
+        playerRound(userInput, comp);
+    }
+    else if(userInput == "scissors") {
+        playerRound(userInput, comp);
+    }
     else {
         alert("Invalid input. Please try again");
-      }
+    }
 }
+
+function playerRound(player, comp){
+    console.log(player);
+    console.log(comp);
+};
+
