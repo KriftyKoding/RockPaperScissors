@@ -3,7 +3,7 @@
     <head>
         <title> Rock, Paper, Scissors</title>
         <meta name="KrizzyDizzy" content="Play Rock Paper Scissor with Comp">
-        <link href="style.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
     </head>
     <body> 
         <script src="script.js"></script>
@@ -20,16 +20,14 @@
             <h1>Rock, Paper, Scissors</h1>
             <h2>Best 3 out of 5 games wins</h2>
             <div>
-                <form action="Pick Rock, Paper or Scissors">
-                    <div><label for="Selection">Rock, Paper or Scissors</label></div>
-                    <input type="text" id="Selection" name="Selection"><br><br>
-                    <input type="submit" value="Submit">
+                <form id="fight" action="Pick Rock, Paper or Scissors">
+                    <input type="button" onclick="fight()" value="Want to Play??">
                   </form>
             </div>
-            <div id=display>
+            <div id="display">
                 Results
             </div>
-                <div id=results>
+                <div id='results'>
                     <div id="you" class=resultDisplay>
                         You
                         <script>
