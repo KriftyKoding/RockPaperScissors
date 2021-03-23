@@ -98,7 +98,19 @@ function playerRound(player, comp){
 function game(){
     // count  round function
     if (rounds == 5){
-        alert("Congrat game over");
+        if (yourNumWins > compNumWins){
+            alert("Congrats. You win, finalscore is " + yourNumWins +
+                " vs " + compNumWins + ".");
+        }
+        else if (yourNumWins = compNumWins){
+            alert("Tie!!! Finalscore is " + yourNumWins +
+              " vs " + compNumWins + ".");
+        }
+        else {
+            alert("Sorry,. you win. Finalscore is " + yourNumWins +
+            " vs " + compNumWins + ".");
+        };
+    
     }
     else{
         fight();
