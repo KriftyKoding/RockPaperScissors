@@ -4,20 +4,31 @@
         <title> Rock, Paper, Scissors</title>
         <meta name="KrizzyDizzy" content="Play Rock Paper Scissor with Comp">
         <link href="/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="rock-paper-scissors.svg" type="image/x-icon">
     </head>
     <body> 
-        <script src="script.js"></script>
-        
         <main>
             <h1>Rock, Paper, Scissors</h1>
             <h2>Best 3 out of 5 games wins</h2>
-            <div id="fight">
-                "Pick Rock, Paper or Scissors"
-              <!-- type="button" onclick="game()" value="Want to Play??" -->
-              <button onclick="game()">Want to Play??</button>
-                
+            <div id="game">
+                <div id="rock">rock button</div>
+                <div id="paper">paper button</div>
+                <div id="scissors">scissors button</div>
             </div>
+            <div id="results"> results
+                <div id="you">
+                    <div class="name">name</div>
+                    <div class="resultNum">num</div>
+                </div>
+                <div id = "comp">
+                    <div class="name">name</div>
+                    <div class="resultNum">num</div>
+                </div>
+            </div>
+            
+            
+ 
         </main>
-        
+        <script src="script.js"></script>
     </body>
 </html>
