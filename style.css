@@ -4,15 +4,9 @@ body{
     text-align: center;
 }
 
-#results{
-    display: flex;
-    align-items: center;
-    /* margin: auto;
-    width: 10%; */
-    position: absolute;
-    left: 47.5%;
-}
-
-.resultDisplay{
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
     padding: 5px;
-}
+    width: 150px;
+  }
