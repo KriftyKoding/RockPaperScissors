@@ -24,38 +24,66 @@ function playerRound(player, comp){
     console.log(player)
     console.log(comp)
     if (player == comp){
-        console.log("tie")
+        tieResults(comp);
    }
    else if (player == "rock")
         if (comp == "paper"){
-            console.log("comp wins")
-            compWins.textContent = compNumWins += 1;
+            compWinsResult(comp);
         }
         else {
-            console.log("player wins")
-            playerWins.textContent = playerNumWins += 1;
+            playerWinsResult(comp);
         }
     else if (player == "paper")
         if (comp == "scissors"){
-            console.log("comp wins")
-            compWins.textContent = compNumWins += 1;
+            compWinsResult(comp);
         }
         else {
-            console.log("player wins")
-            playerWins.textContent = playerNumWins += 1;
+            playerWinsResult(comp);
         }
     else 
         if (comp == "rock"){
-            console.log("comp wins")
-            compWins.textContent = compNumWins += 1;
+            compWinsResult(comp);
         }
         else {
-            console.log("player wins")
-            playerWins.textContent = playerNumWins += 1;
+            playerWinsResult(comp);
             }
 }
+// what happens if player wins
+function playerWinsResult(comp){
+    playerWins.textContent = playerNumWins += 1;
+    const container = document.querySelector('#button'); 
+    const content = document.createElement('div'); 
+    content.setAttribute('id','display');
+    content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Wins!`; 
+    container.appendChild(content);
+    setTimeout(function(){ 
+        container.removeChild(content);
+    }, 3000);
+}
 
+//what happens if comp wins
+function compWinsResult(comp){
+    compWins.textContent = compNumWins += 1;
+    const container = document.querySelector('#button'); 
+    const content = document.createElement('div'); 
+    content.setAttribute('id','display');
+    content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Loses.`; 
+    container.appendChild(content);
+    setTimeout(function(){ 
+        container.removeChild(content);
+    }, 3000);
+}
 
-
+//what happens if tie
+function tieResults(comp){
+    const container = document.querySelector('#button'); 
+    const content = document.createElement('div'); 
+    content.setAttribute('id','display');
+    content.textContent = 'Comp choose ' + comp + `. \r\nTie.`; 
+    container.appendChild(content);
+    setTimeout(function(){ 
+        container.removeChild(content);
+    }, 3000);
+}
 
 
