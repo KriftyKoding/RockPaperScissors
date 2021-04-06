@@ -51,19 +51,35 @@ function playerRound(player, comp){
 // what happens if player wins
 function playerWinsResult(comp){
     playerWins.textContent = playerNumWins += 1;
-    const container = document.querySelector('#button'); 
-    const content = document.createElement('div'); 
-    content.setAttribute('id','display');
-    content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Wins!`; 
-    container.appendChild(content);
-    setTimeout(function(){ 
-        container.removeChild(content);
-    }, 3000);
+    console.log(playerNumWins)
+    if (playerNumWins == 5){
+        console.log("winner!")
+        const body = document.querySelector('body');
+        body.textContent = "Player Wins!!!";
+        body.classList.add('done');
+    }
+    else {
+        const container = document.querySelector('#button'); 
+        const content = document.createElement('div'); 
+        content.setAttribute('id','display');
+        content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Wins!`; 
+        container.appendChild(content);
+        setTimeout(function(){ 
+            container.removeChild(content);
+        }, 3000);
+    }
 }
 
 //what happens if comp wins
 function compWinsResult(comp){
     compWins.textContent = compNumWins += 1;
+    if (compNumWins == 5){
+        console.log("Comp Wins")
+        const body = document.querySelector('body');
+        body.textContent = "Comp Wins";
+        body.classList.add('done');
+    }
+    else {
     const container = document.querySelector('#button'); 
     const content = document.createElement('div'); 
     content.setAttribute('id','display');
@@ -72,6 +88,7 @@ function compWinsResult(comp){
     setTimeout(function(){ 
         container.removeChild(content);
     }, 3000);
+    }
 }
 
 //what happens if tie

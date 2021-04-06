@@ -21,6 +21,15 @@ img {
     
     border-radius: 5%;
     background: white;
+
+}
+
+.done{
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    font-size: 500%;
 }
 /* 
 h1 {
