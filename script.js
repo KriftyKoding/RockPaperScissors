@@ -1,6 +1,7 @@
 
 let compNumWins = 0;
 let playerNumWins = 0;
+let count = 0
 
 const playerWins = document.querySelector('#playerWins'); 
 playerWins.textContent = playerNumWins;
@@ -59,20 +60,14 @@ function playerWinsResult(comp){
         body.classList.add('done');
     }
     else {
-        const container = document.querySelector('#button'); 
-        const content = document.createElement('div'); 
-        content.setAttribute('id','display');
-        content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Wins!`; 
-        container.appendChild(content);
-        setTimeout(function(){ 
-            container.removeChild(content);
-        }, 3000);
+        handleResultBeforeWin(comp, 'Player Wins!');
     }
 }
 
 //what happens if comp wins
 function compWinsResult(comp){
     compWins.textContent = compNumWins += 1;
+    console.log(compNumWins)
     if (compNumWins == 5){
         console.log("Comp Wins")
         const body = document.querySelector('body');
@@ -80,27 +75,30 @@ function compWinsResult(comp){
         body.classList.add('done');
     }
     else {
-    const container = document.querySelector('#button'); 
-    const content = document.createElement('div'); 
-    content.setAttribute('id','display');
-    content.textContent = 'Comp choose ' + comp + `. \r\nPlayer Loses.`; 
-    container.appendChild(content);
-    setTimeout(function(){ 
-        container.removeChild(content);
-    }, 3000);
+        handleResultBeforeWin(comp, 'Player Loses.');
     }
 }
 
 //what happens if tie
 function tieResults(comp){
-    const container = document.querySelector('#button'); 
-    const content = document.createElement('div'); 
-    content.setAttribute('id','display');
-    content.textContent = 'Comp choose ' + comp + `. \r\nTie.`; 
-    container.appendChild(content);
-    setTimeout(function(){ 
-        container.removeChild(content);
-    }, 3000);
+    handleResultBeforeWin(comp, 'Tie.');
 }
 
+//handles the results of each match if there's no current winner
+function handleResultBeforeWin(comp, stringToDetermineWinner){
+    const container = document.querySelector('#button');
+    const content = document.createElement('div'); 
+    
+    if (document.querySelector('#display')) {
+        document.querySelector('#display').remove();
+    }
 
+    content.setAttribute('id','display');
+    content.textContent = 'Comp choose ' + comp + `.\r\n${stringToDetermineWinner}`;  /* 'Tie' */
+    container.appendChild(content);
+    setTimeout(function () {
+        if (content) {
+            content.remove();
+        }
+    }, 3000);
+}
