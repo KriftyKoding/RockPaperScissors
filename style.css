@@ -1,6 +1,49 @@
+.backgroundImage {
+    Position:fixed;
+    Top: 0;
+    left: 0%;
+    /* Width: 100vh; */
+    Height: 100vh;
+    Opacity: 0.35;
+    Z-index: -5000;
+  }
+  
+  .backgroundImage img {
+    width:100vw;
+    height: 135vh;
+    object-fit: cover;
+  }
+  
+  main{
+  /* color scheme - https://www.colorcombos.com/color-schemes/187/ColorCombo187.html*/
+    
+    color: #FF9900;
+    color: #999999;
+    color: #CCCCCC;
+    color: #771100;
+    color: #CC6633;
+  }
+  
+  .fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background: #7a7a7a;
+    padding: 11px;
+    margin-left: -10px;
+    color: #771100;
+    bottom: 0;
+    vertical-align: top;
+  }
+  
+  .fixed-footer img {
+    height: 1.3rem;
+    vertical-align: bottom;
+    padding: 0 2px;
+  }
+
 body{
     background-color: black;
-    color: rgb(20, 233, 222);
+    color: #771100;
     text-align: center;
 }
 
@@ -24,7 +67,7 @@ button {
     width: 160px;
     height: 160px;
     border: solid;
-    border-color: rgb(20, 233, 222);
+    border-color: #771100;
     border-radius: 5%;
     border-width: 10px;
     margin: 7px;
@@ -53,7 +96,7 @@ h3{
     white-space: pre;
     font-size: 300%;
     text-shadow: rgb(13, 13, 13) 7px 0px 0px, rgb(13, 13, 13) 6.92869px 0.996602px 0px, rgb(13, 13, 13) 6.71622px 1.9729px 0px, rgb(13, 13, 13) 6.36692px 2.909px 0px, rgb(13, 13, 13) 5.8879px 3.78584px 0px, rgb(13, 13, 13) 5.28893px 4.58555px 0px, rgb(13, 13, 13) 4.5822px 5.29183px 0px, rgb(13, 13, 13) 3.78212px 5.8903px 0px, rgb(13, 13, 13) 2.90498px 6.36876px 0px, rgb(13, 13, 13) 1.96865px 6.71747px 0px, rgb(13, 13, 13) 0.992221px 6.92932px 0px, rgb(13, 13, 13) -0.00442571px 7px 0px, rgb(13, 13, 13) -1.00098px 6.92806px 0px, rgb(13, 13, 13) -1.97715px 6.71498px 0px, rgb(13, 13, 13) -2.91303px 6.36508px 0px, rgb(13, 13, 13) -3.78956px 5.88551px 0px, rgb(13, 13, 13) -4.58889px 5.28603px 0px, rgb(13, 13, 13) -5.29472px 4.57885px 0px, rgb(13, 13, 13) -5.89269px 3.77839px 0px, rgb(13, 13, 13) -6.3706px 2.90095px 0px, rgb(13, 13, 13) -6.71871px 1.96441px 0px, rgb(13, 13, 13) -6.92995px 0.98784px 0px, rgb(13, 13, 13) -6.99999px -0.00885142px 0px, rgb(13, 13, 13) -6.92743px -1.00536px 0px, rgb(13, 13, 13) -6.71372px -1.98139px 0px, rgb(13, 13, 13) -6.36324px -2.91705px 0px, rgb(13, 13, 13) -5.88311px -3.79328px 0px, rgb(13, 13, 13) -5.28313px -4.59223px 0px, rgb(13, 13, 13) -4.57551px -5.29762px 0px, rgb(13, 13, 13) -3.77466px -5.89507px 0px, rgb(13, 13, 13) -2.89692px -6.37243px 0px, rgb(13, 13, 13) -1.96016px -6.71995px 0px, rgb(13, 13, 13) -0.983458px -6.93057px 0px, rgb(13, 13, 13) 0.0132771px -6.99999px 0px, rgb(13, 13, 13) 1.00974px -6.92679px 0px, rgb(13, 13, 13) 1.98564px -6.71247px 0px, rgb(13, 13, 13) 2.92107px -6.36139px 0px, rgb(13, 13, 13) 3.797px -5.88071px 0px, rgb(13, 13, 13) 4.59557px -5.28022px 0px, rgb(13, 13, 13) 5.30051px -4.57215px 0px, rgb(13, 13, 13) 5.89746px -3.77094px 0px, rgb(13, 13, 13) 6.37426px -2.89289px 0px, rgb(13, 13, 13) 6.72119px -1.95591px 0px, rgb(13, 13, 13) 6.93119px -0.979076px 0px;
-    background-color: rgb(20, 233, 222);
+    background-color: #771100;
     /* color: black; */
     padding: 10px 20px;
     
@@ -68,5 +111,5 @@ h3{
     font-size: 500%;
     color: #FFFFFF;
     background: #000000;
-    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;
+    text-shadow: -5px 5px 0px #771100, -10px 10px 0px #771100, -15px 15px 0px #771100;
 }
